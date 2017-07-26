@@ -1,5 +1,24 @@
-@grey: #b67474;
+@color-title: #333;
+@color-text: #888;
+
+// Mixin Text
+.main-text-style(@color; @font-weight; @font-size){
+  color: @color;
+  font-weight: @font-weight;
+  font-size: @font-size;
+}
 
 body{
-  background-color: @grey;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: @color-text;
+  font-size: 16px;
+}
+
+.title{
+  .main-text-style(@color-title, 100, 3em);
+}
+
+.subtitle{
+  .main-text-style(@color-text, 100, 1.5em);
 }
